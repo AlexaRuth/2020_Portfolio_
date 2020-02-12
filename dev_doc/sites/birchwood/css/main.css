@@ -121,9 +121,7 @@ position: absolute;
 color: white;
 left: 0;
 top: 38%;
-
 }
-
 
 img {
 width: 100%;
@@ -176,15 +174,33 @@ margin: 50px;
 text-align: center; 
 }
 
+/*
+*
+*
+THE CABINS 
+*
+*
+*/
+
+.thecabins{
+	max-width: 980px;
+	text-align:justify;
+ margin: auto;
+ margin-top: 150px;
+}
+
+
+
 
 /*
  MEDIA QUERIES 
 */
 
 @media only screen and (max-width: 600px){
- 
+
 body{
-background-color: lightblue;}
+background-color: lightblue;
+}
 
 h1{
 top: 30%;
@@ -192,7 +208,6 @@ width: 100%;
 text-align: center;
 font-size: 2em;
 /*color: deeppink;*/
-}
+}}
 
-}
 /*------------*/
