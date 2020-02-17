@@ -5,114 +5,111 @@
 Micro reset 
 */
 
-*, *:before, *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0; }
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
 
 html {
-	
-  -webkit-font-smoothing: antialiased; }
+
+	-webkit-font-smoothing: antialiased;
+}
 
 
 body {
-  margin: 0 auto;
-  height: 100%;
-	 background-color:black;
+	margin: 0 auto;
+	height: 100%;
+	background-color: black;
 }
-  
+
 /* 
 BODY MEDIA Q
 */
 
-@media screen and (min-width: 480px) {
-    body {width: 375px; } }
-
-@media screen and (min-width: 750px) { 
-				body {width: 650px;} }
-
-@media screen and (min-width: 820px) {
-    body { width: 1600px; } }
 
 /******/
 
 h1 {
-  color: white;
-  font-family: "Raleway", Arial, sans-serif;
-  font-size: 25px;
-  font-weight: 700;
-  line-height: 1.75; }
+	color: white;
+	font-family: "Raleway", Arial, sans-serif;
+	font-size: 25px;
+	font-weight: 700;
+	line-height: 1.75;
+}
 
 h2 {
-  color: red;
-  font-family: "Raleway", Arial, sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.75; }
+	color: red;
+	font-family: "Raleway", Arial, sans-serif;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 1.75;
+}
 
 h3 {
-  color:whitesmoke;
-  font-family: "Raleway", Arial, sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 1.75; }
+	color: whitesmoke;
+	font-family: "Raleway", Arial, sans-serif;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 1.75;
+}
 
 p {
-  color: whitesmoke;
-  font-family: "Raleway", Arial, sans-serif;
-  font-size: 12px;
-  font-weight: 300;
-  line-height: 1.25; }
- 
+	color: whitesmoke;
+	font-family: "Raleway", Arial, sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 1.5em;
+	text-align: center;
+}
+
 a {
-  color: white;
-  font-family: "Raleway", Arial, sans-serif;
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 1.25;
+	color: white;
+	font-family: "Raleway", Arial, sans-serif;
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 1.25;
 	text-decoration: none;
 }
 
-#landimage{
+.landimage {
 	z-index: -2;
-	position:fixed;
-	top: 150px;
+	display: inline-flex;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	padding-top: 2px;
 }
 
-.welcome{
-z-index: -2;
-position: absolute;
-top:150px;
+.welcome {
+	z-index: 1;
+	top: 100px;
+	align-content: center;
+	position: fixed;
+	display:block;
+	margin-left:auto;
+	margin-right: auto;
+	max-width: 350px;
 }
 
-header{
+header {
 	margin-top: 15px;
+	margin-left: 30px;
 	align-content: center;
 	text-align: center;
 }
 
 
-footer{
-	position: absolute;
-	bottom:10px;
+footer {
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 150px;
+	bottom: auto;
 }
-
-
-/*PARAGRAPH TEXT Q*/
-@media screen and (min-width: 480px) {
-    p {
-      font-size: 16px;
-      width: 320px; } }
-  @media screen and (min-width: 640px) {
-    p {
-      font-size: 14px;
-      width: 650px; } }
-  @media screen and (min-width: 820px) {
-    p {
-      width: 960px; } }
-
 
 
 /* 
@@ -120,173 +117,206 @@ NAVIGATION LOOK AND FEEL
 */
 
 .page {
-  width: 100%;
-  height: 100vh;
-  font-family: 'Encode Sans Condensed', sans-serif;
-  font-weight: 600;
-  letter-spacing: .03em;
-/*  color: #212121;*/
+	width: 100%;
+	height: 100vh;
+	font-family: 'Encode Sans Condensed', sans-serif;
+	font-weight: 600;
+	letter-spacing: .03em;
 }
 
 #nav-container {
-  position: fixed;
-	 top: 0px;
-  height: 100vh;
-  width: 100%;
-  pointer-events: none;
+	position: fixed;
+	top: 0px;
+	height: 100vh;
+	width: 100%;
+	pointer-events: none;
 }
+
 #nav-container .bg {
-  position: absolute;
-  top: 70px;
-  left: 0;
-  width: 100%;
-  height: calc(100% - 70px);
-  visibility: hidden;
-  opacity: 0;
-  transition: .3s;
-  background: #000;
+	position: absolute;
+	top: 70px;
+	left: 0;
+	width: 100%;
+	height: calc(100% - 70px);
+	visibility: hidden;
+	opacity: 0;
+	transition: .3s;
+	background: #000;
 }
+
 #nav-container:focus-within .bg {
-  visibility: visible;
-  opacity: .6;
+	visibility: visible;
+	opacity: .6;
 }
+
 #nav-container * {
-  visibility: visible;
+	visibility: visible;
 }
 
 .button {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  z-index: 1;
-  -webkit-appearance: none;
-  border: 0;
-  background: transparent;
-  border-radius: 0;
-  height: 70px;
-  width: 30px;
-  cursor: pointer;
-  pointer-events: auto;
-  margin-left: 25px;
-  touch-action: manipulation;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	z-index: 1;
+	-webkit-appearance: none;
+	border: 0;
+	background: transparent;
+	border-radius: 0;
+	height: 70px;
+	width: 30px;
+	cursor: pointer;
+	pointer-events: auto;
+	margin-left: 25px;
+	touch-action: manipulation;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .icon-bar {
-  display: block;
-  width: 100%;
-  height: 3px;
-  background: white;
-  transition: .3s;
+	display: block;
+	width: 100%;
+	height: 3px;
+	background: white;
+	transition: .3s;
 }
 
 .icon-bar + .icon-bar {
-  margin-top: 5px;
+	margin-top: 5px;
 }
 
 #nav-container:focus-within .button {
-  pointer-events: none;
+	pointer-events: none;
 }
 
 #nav-container:focus-within .icon-bar:nth-of-type(1) {
-  transform: translate3d(0,8px,0) rotate(45deg);
+	transform: translate3d(0, 8px, 0) rotate(45deg);
 }
 
 #nav-container:focus-within .icon-bar:nth-of-type(2) {
- opacity: 0;
+	opacity: 0;
 }
 
 #nav-container:focus-within .icon-bar:nth-of-type(3) {
-  transform: translate3d(0,-8px,0) rotate(-45deg);
+	transform: translate3d(0, -8px, 0) rotate(-45deg);
 }
 
 #nav-content {
-  margin-top: 70px;
-  padding: 20px;
-  width: 90%;
-  max-width: 300px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: calc(100% - 70px);
-  background: black;
-  pointer-events: auto;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  transform: translateX(-100%);
-  transition: transform .3s;
-  will-change: transform;
-  contain: paint;
+	margin-top: 70px;
+	padding: 20px;
+	width: 90%;
+	max-width: 300px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: calc(100% - 70px);
+	background: black;
+	pointer-events: auto;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	transform: translateX(-100%);
+	transition: transform .3s;
+	will-change: transform;
+	contain: paint;
 }
 
 #nav-content ul {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
 	list-style: none;
 }
 
 #nav-content li a {
-  padding: 10px 5px;
-  display: block;
-  text-transform: uppercase;
-  transition: color .1s;
+	padding: 10px 5px;
+	display: block;
+	text-transform: uppercase;
+	transition: color .1s;
 }
 
 #nav-content li a:hover {
-  color: red;
+	color: red;
 }
 
 #nav-content li:not(.small) + .small {
-  margin-top: auto;
+	margin-top: auto;
 }
 
 .small {
-  display: flex;
-  align-self: center;
+	display: flex;
+	align-self: center;
 }
 
 .small a {
-  font-size: 12px;
-  font-weight: 400;
-  color: white;
+	font-size: 12px;
+	font-weight: 400;
+	color: white;
 }
 
 .small a + a {
-  margin-left: 15px;
+	margin-left: 15px;
 }
 
 #nav-container:focus-within #nav-content {
-  transform: none;
+	transform: none;
 }
 
 
 
 
 
+MEDIA QUERIES
 
+@media screen and (min-width: 425px) {
+   		p{
+					font-size: 16px;
+					line-height: 1.5em;
+					text-align: left;
+					} 
+
+					.welcome{
+					display: block;
+					margin-left: 60px;
+					top:110px;
+					max-width: 400px;
+					}
+
+					.landimage{
+					padding-top: 275px;
+					} 
+
+					footer{
+				 margin-left:80px;
+					bottom:20px;
+					}
+}
 
 /*
- {
-  color: #aaa;
-  font-family: "Raleway", Arial, sans-serif;
-  font-size: 12px;
-  font-weight: 300;
-  line-height: 1.25; }
+
+@media screen and (min-width: 640px) {
+   		p{
+					font-size: 18px;
+					line-height: 1.5em;
+					text-align: center;
+					} 
+
+					.welcome{
+					display: block;
+					margin-left: 20px;
+					top:110px;
+					max-width: 600px;
+					}
+
+					.landimage{
+					padding-top: 275px;
+					} 
+
+					footer{
+				 margin-left:160px;
+					bottom:20px;
+					}
+}
+
+
+
+@media screen and (min-width: 820px) {
+     }
 */
-  
-/* 
-NAVIGATION MEDIA Q
-*/
-/*
-@media screen and (min-width: 480px) {
-    p {
-      font-size: 16px;
-      width: 320px; } }
-  @media screen and (min-width: 640px) {
-    p {
-      font-size: 14px;
-      width: 650px; } }
-  @media screen and (min-width: 820px) {
-    p {
-      width: 960px; } }*/
